@@ -1,0 +1,12 @@
+mapas de imagem:
+exitem 3 tipos de shapes: retangulo, circulos e poligonal
+
+shape é o formato
+coords é as coordenadas na foto
+href é o link que irá chamar ao click
+e target é aonde sairá o resultado do link
+
+no rect (retangulo) os valores são definidos em 4 coordenadas x,y iniicial e x, y final. De uma extremidade a outra em diagonal
+no circle (ciruclo) eu informo o ponto do centro e qual o tamanho em pixel do raio
+na área poly (poligonal) eu não tenho uma especificação de qunatos ponto, vai dependender de quantos pontos preciso.
+

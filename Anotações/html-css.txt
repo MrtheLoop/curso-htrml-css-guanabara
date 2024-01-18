@@ -1,0 +1,36 @@
+Como centralizar uma div
+
+Uma div tem 4 margens, cima, direita, baixo e esquerda
+
+posso deixar os valores direita (2 posição) e esquerda (4 posição), como auto
+
+No box-shadow:
+
+deslocamento_lateral deslocamento_vertical espalhamento_sombra cor_sombra
+
+
+Padding: 
+
+é o espaço interno do objeto
+
+dica: se meu padding for o mesmo valor para todos os lados, basta que eu coloque o valor uma vez
+
+*Cabeçalho com CSS*
+
+no headrer, para configurar a borda, são na seguinte ordem:
+
+largura_borda cord_borda formato_borda
+
+
+*Semantica em HTML5*
+
+section: sessão
+
+aside: conteúdo lateral
+
+footer: rodapé
+
+
+
+
+

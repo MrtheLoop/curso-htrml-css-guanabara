@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo sobre o Google Glass</title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    <link rel="stylesheet" type="text/css" href="_css/form.css">
+    <script language="javascript" src="_javascript/funcoes.js"></script>
+    <script>
+        function calc_total() {
+            var qtd = parseInt(document.getElementById('cQtd').value);
+            tot = qtd * 1500;
+            document.getElementById('cTot').value = tot;
+                }
+    </script>
+</head>
+<body>
+    <div id="interface">
+
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>
+<img id="icone" src="_imagens/contato.png">
+
+            <nav id="menu">
+                <h1>Menu Principal</h1>
+                <ul type="disc">
+                <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+                <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+                <li><a href="fotos.html" onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')">Fotos</a></li>
+                <li><a href="multimidia.html" onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')">Multimídia</a></li>
+                <li><a href="fale-conosco.html" onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')">Fale conosco</a></li>
+                </ul>
+            </nav>
+        </header>
+
+<section id="corpo-full">
+    <article id="noticia-principal">
+        <header id="cabecalho-artigo">
+            <hgroup>
+                <h3>Fale Conosco > Contato</h3>
+                <h1>Formulário de Contato</h1>
+                <h2>por Gustavo Guanabara</h2>
+                <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+            </hgroup>
+        </header>
+   
+
+
+<form method="post" id="iContato" action="mailto:contato@gmail.com" oninput="calc_total();">
+ 
+    <fieldset id="usuario">
+        <legend>Identificação do Usuário</legend>
+
+        <p> <label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome completo"/></p>
+        <p> <label for="cSenha">Senha: </label> <input type="password" name="tSenha" id="cSenha" size="10" maxlength="8" placeholder="8 dígitos"/></p>
+        <p> <label for="cMail">E-mail:</label> <input type="email" name="tMail" id="cMail" size="20" maxlength="40" placeholder="Digite seu email"/></p>
+        <fieldset id="sexo"> 
+            <legend>Sexo:</legend> 
+            <input type="radio"  name="tSexo" id="cMasc"/> <label for="cMasc">Masculino</label><br>
+            <input type="radio"  name="tSexo" id="cFem"/> <label for="cFem">Feminino</label>
+        </fieldset>
+        <p> <label for="cNasc">Data de Nascimento: <input type="date" name="tNasc" id="cNasc"></label></p>
+       
+    </fieldset>
+
+    <fieldset id="endereco">
+        <legend>Endereço do Usuário</legend>
+
+    <p> <label for="cRua">Logradouro:</label> <input type="text" name="tRua" id="cRua" size="13" placeholder="Rua, Av, Trav, ..."></p>
+    <p> <label> Número: <input type="number" name="tNum" id="cNum" min="0" max="99999"></label></p>
+    <p> <label for="cEst"> Estado: </label> 
+    <select name="tEst" id="cEst"> 
+        <optgroup label="Região Centro-Oeste">
+            <option value="GO">Goiás</option>
+            <option value="MT" selected>Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+        </optgroup>
+
+        <optgroup label="Região Sudeste">
+            <option value="MG">Minas Gerais</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="SP">São Paulo</option>
+        </optgroup>
+
+
+
+        <option value="BA">Bahia</option>
+    </select></p>
+    <p> <label for="cCid"> Cidade: <input type="text" name="tCid" id="cCid" maxlength="35" size="20" placeholder="Sua Cidade" list="cidades"> </label> </p>
+    
+    <datalist id="cidades">
+        <option value="Rio de Janeiro"></option>
+        <option value="Nova Iguaçu"></option>
+        <option value="Niteroi"></option>
+        <option value="Belford Roxo"></option>
+    </datalist>
+    
+    </fieldset>
+
+    <fieldset id="mensagem">
+        <legend>Mensagem do Usuário</legend>
+
+        <p><label for="cUrg">Grau de Urgência:</label>
+        Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"> Máx
+        </p>
+        <p> <label for="cMsg">Mensagem:</label>
+        <textarea name="tMsg" id="cMsg" placeholder="Digite sua mensagem"></textarea>
+        </p>
+
+    </fieldset>    
+
+    <fieldset id="pedido">
+        <legend>Quero um Google Glass</legend>
+        <p> <input type="checkbox" name="tPed" id="cPed">
+            <label for="cPed">Gostaria de adquirir um Google Glass quando disponível
+            </label></p>
+        <p><label for="cCor">Cor:</label>
+        <input type="color" name="tCor" id="cCor" value="#0000FF"></p>
+        <p><label for="cQtd">Quantidade:</label>
+        <input type="number" name="tQtd" id="cQtd" min="0" max="5"></p>
+        <p><label for="cTot">Preço Total: R$</label>
+        <input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly></p>
+    </fieldset>
+
+
+<input type="image" name="tEnviar" src="_imagens/botao-enviar.png">
+
+</form>
+</section>
+</article>
+
+<footer id="rodape">
+    <p>
+        Copyright &copy; 2013 - by Gustavo Guanabara <br>
+        <a href="https://pt-br.facebook.com/" target="_blank">Facebook</a> | <a href="https://twitter.com/login?lang=pt" target="_blank">Twitter</a>
+    </footer>
+    </p>
+    </div>
+    </body>
+    </html>

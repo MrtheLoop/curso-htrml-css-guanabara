@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 02</title>
+    <script>
+        //Essa função acende a lampada ao passar o mouse por cima da imagem
+        function acendeLampada() {
+            document.getElementById("luz").src = "_imagens/lampada-acesa.jpg";
+        }
+
+        //Essa função retorna a luz apagada ao tirar o mouse de cima da imagem
+
+        function apagaLampada() {
+            document.getElementById("luz").src = "_imagens/lampada-apagada.jpg";
+        }
+
+        function quebraLampada() {
+            document.getElementById("luz").src = "_imagens/lampada-quebrada.jpg";
+        }
+    </script>
+</head>
+<body>
+    <h1>Acenda a Lâmpada</h1>
+    <img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="acendeLampada()" onmouseout="apagaLampada()" onclick="quebraLampada"/>
+</body>
+</html>

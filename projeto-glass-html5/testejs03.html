@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 03</title>
+    <script>
+        //Essa função acende a lampada ao passar o mouse por cima da imagem
+        // 1 - lampada acesa
+        // 2 - lampada apagada
+        // 3 - lampada quebrada
+        var quebrada = false;
+        function mudaLampada(tipo) {
+            if (!quebrada) {
+                document.getElementById("luz").src = "_imagens/" + tipo + ".jpg";
+                if (tipo == 'lampada-quebrada') {
+                    quebrada = true;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Acenda a Lâmpada</h1>
+    <img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')" onclick="mudaLampada('lampada-quebrada')"/>
+</body>
+</html>
